@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 
 import br.com.alura.business.AgendamentoEmailBusiness;
 import br.com.alura.entity.AgendamentoEmail;
+import br.com.alura.exception.BusinessException;
 
 
 @Path("/agendamentoemail")
@@ -25,14 +26,14 @@ public class AgendamentoEmailResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarAgendamentoEmail() {
-    	List<AgendamentoEmail> emails = agendamentoEmailBusiness.listarAgendamentosEmail();
+    	List<AgendamentoEmail> emails = agendamentoEmailBusiness.listarAgemndamentosEmail();
     	
     	return Response.ok(emails).build();
     }
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response salvarAgendamentoEmail(AgendamentoEmail agendamentoEmail) {
+    public Response salvarAgendamentoEmail(AgendamentoEmail agendamentoEmail) throws BusinessException {
     	agendamentoEmailBusiness.salvarAgendamentoEmail(agendamentoEmail);
     	return Response.status(201).build();
     }
