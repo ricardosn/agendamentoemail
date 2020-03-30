@@ -76,5 +76,10 @@ public class AgendamentoEmailBusiness {
 	     }
 		 
 	 }
+	 
+	 public void marcarEnviadas(AgendamentoEmail agendamentoEmail) {
+		 agendamentoEmail.setEnviado(true);
+		 agendamentoEmailDao.atualizarAgendamentoEmail(agendamentoEmail);
+	 }
 
 }

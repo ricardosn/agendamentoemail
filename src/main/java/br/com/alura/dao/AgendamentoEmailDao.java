@@ -43,5 +43,9 @@ public class AgendamentoEmailDao {
 		
 		return query.getResultList();
 	}
+	
+	public void atualizarAgendamentoEmail(AgendamentoEmail agendamentoEmail) {
+		entityManager.merge(agendamentoEmail);
+	}
 
 }
