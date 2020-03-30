@@ -1,6 +1,8 @@
 # agendamentoemail
 Curso EJB - Alura
 
+http://localhost:8080/
+
 ## Configurando DataSource no Wildfly
 ```
 .\jboss-cli.bat --connect
